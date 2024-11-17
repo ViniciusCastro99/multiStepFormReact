@@ -1,0 +1,51 @@
+.steps{
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.steps::after{ /*Cria um pseudo elemento que será a linha*/
+    content: "";
+    width: 90%;
+    border-bottom: 1px solid #ccc;
+    position: absolute;
+    top: 20px;
+}
+
+.step{
+    text-align: center; /*Centraliza o texto*/
+    background-color: #fff;
+    z-index: 1;/*Coloca o elemento do passo a frente da linha dando a ideia de ligação*/
+    width: 20%;
+    padding: 0.5rem;
+}
+
+.step svg{
+    font-size: 1.6rem;
+    margin-bottom: .2rem;
+}
+
+.active{
+    font-weight: bold;
+}
+
+.active > svg {
+    fill: #7076f4;
+}
+ @media(max-width: 600px){
+    .steps{
+        width: 80%;
+    }
+    .step{
+        width: 10%;
+    }
+    .step p{
+        font-size: 12px;
+    }
+ }
